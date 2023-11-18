@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>intro</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Chapter 2</a></li><li class="chapter-item expanded "><a href="introduccion.html" class="active"><strong aria-hidden="true">3.</strong> intro</a></li><li class="chapter-item expanded "><a href="conclucion.html"><strong aria-hidden="true">4.</strong> Conclucion</a></li><li class="chapter-item expanded "><a href="web-git.html"><strong aria-hidden="true">5.</strong> Hacerlo Web</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>¡Claro! Aquí tienes una guía detallada con ejemplos en archivos Markdown para cada paso:</p>
+<h3 id="instalación-de-mdbook-en-termux"><a class="header" href="#instalación-de-mdbook-en-termux">Instalación de mdbook en Termux:</a></h3>
+<ol>
+<li>Abre Termux.</li>
+<li>Ejecuta los siguientes comandos para actualizar y luego instalar <code>mdbook</code>:
+<pre><code class="language-bash">pkg update
+pkg install mdbook
+</code></pre>
+</li>
+</ol>
+<h3 id="creación-de-un-nuevo-libro"><a class="header" href="#creación-de-un-nuevo-libro">Creación de un nuevo libro:</a></h3>
+<ol>
+<li>
+<p>Crea un directorio para tu libro:</p>
+<pre><code class="language-bash">mkdir mi_libro
+cd mi_libro
+</code></pre>
+</li>
+<li>
+<p>Inicializa un nuevo libro utilizando <code>mdbook</code>:</p>
+<pre><code class="language-bash">mdbook init
+</code></pre>
+<p>Esto creará la estructura básica de tu libro con archivos predefinidos.</p>
+</li>
+</ol>
+<h3 id="ejemplo-de-edición-del-contenido-del-libro"><a class="header" href="#ejemplo-de-edición-del-contenido-del-libro">Ejemplo de edición del contenido del libro:</a></h3>
+<ol>
+<li>Edita el archivo <code>SUMMARY.md</code> para estructurar tu libro:
+<pre><code class="language-markdown"># Summary
+
+- [Introducción](./introduccion.md)
+- [Capítulo 1](./capitulo_1.md)
+- [Capítulo 2](./capitulo_2.md)
+</code></pre>
+</li>
+</ol>
+<ul>
+<li>deberan estar los <code>.md</code> dentro de la carpeta src de tu  carpeta raiz del proyecto</li>
+</ul>
+<ol start="2">
+<li>
+<p>Crea tus archivos Markdown para los capítulos y la introducción:</p>
+<p><strong><code>introduccion.md</code></strong></p>
+<pre><code class="language-markdown"># Introducción
+
+¡Bienvenido a mi libro! Aquí comenzamos nuestra aventura.
+</code></pre>
+<p><strong><code>src/capitulo_1.md</code></strong></p>
+<pre><code class="language-markdown"># Capítulo 1: Título
+
+Este es el contenido del primer capítulo de mi libro.
+</code></pre>
+<p><strong><code>src/capitulo_2.md</code></strong></p>
+<pre><code class="language-markdown"># Capítulo 2: Otro Título
+
+Este es el contenido del segundo capítulo.
+</code></pre>
+</li>
+</ol>
+<h3 id="previsualización-local-del-libro"><a class="header" href="#previsualización-local-del-libro">Previsualización local del libro:</a></h3>
+<ol>
+<li>
+<p>Para previsualizar tu libro localmente, ejecuta:</p>
+<pre><code class="language-bash">mdbook serve
+</code></pre>
+<p>Esto iniciará un servidor local para tu libro en <code>http://localhost:3000</code>.</p>
+</li>
+<li>
+<p>Abre un navegador web en Termux o desde cualquier dispositivo en la misma red y visita esa dirección para ver cómo se ve tu libro.</p>
+</li>
+</ol>
+<h3 id="generación-del-libro-final"><a class="header" href="#generación-del-libro-final">Generación del libro final:</a></h3>
+<ol>
+<li>Cuando hayas terminado de editar tu libro y estés listo para generar la versión final, ejecuta:
+<pre><code class="language-bash">mdbook build
+</code></pre>
+Esto generará los archivos HTML estáticos de tu libro en un directorio llamado <code>book</code>.</li>
+</ol>
+<h3 id="visualización-del-libro-generado"><a class="header" href="#visualización-del-libro-generado">Visualización del libro generado:</a></h3>
+<ol>
+<li>Abre el archivo <code>index.html</code> dentro del directorio <code>book</code> en un navegador web desde Termux para ver el libro finalizado.</li>
+</ol>
+<h3 id="funcionalidades-avanzadas-opcionales"><a class="header" href="#funcionalidades-avanzadas-opcionales">Funcionalidades avanzadas (opcionales):</a></h3>
+<ul>
+<li><strong>Personalización</strong>: Utiliza temas y CSS personalizados para darle un aspecto único a tu libro.</li>
+<li><strong>Plugins</strong>: Agrega complementos (<code>plugins</code>) a <code>mdbook</code> para agregar funcionalidades especiales.</li>
+<li><strong>Git y despliegue</strong>: Utiliza Git para controlar las versiones de tu libro y despliégalo en GitHub Pages u otras plataformas.</li>
+</ul>
+<p>Estos ejemplos en archivos Markdown y pasos detallados te ayudarán a comenzar y avanzar en la creación de tu libro utilizando <code>mdbook</code> en Termux. ¡Espero que esta guía detallada sea de ayuda para ti!</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="chapter_2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="conclucion.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="chapter_2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="conclucion.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
