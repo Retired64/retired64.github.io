@@ -471,3 +471,37 @@ button:active {
 .efecto-derecha.delay-3 {
   animation-delay: 3s;
 }
+
+/* Scrollbar total */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho del scrollbar */
+}
+
+/* Fondo del scrollbar */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background: #ff0000; /* Color rojo de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); /* Sombra interior */
+}
+
+/* Barra de desplazamiento al pasar el cursor */
+::-webkit-scrollbar-thumb:hover {
+    background: #cc0000; /* Color rojo más oscuro al pasar el cursor */
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin; /* Grosor del scrollbar */
+    scrollbar-color: #ff0000 #f1f1f1; /* Color rojo de la barra de desplazamiento y color de fondo */
+}
+
+/* Internet Explorer y Edge */
+.scrollbar {
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* Scrollbar auto-ocultante */
+}
