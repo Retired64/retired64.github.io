@@ -186,6 +186,22 @@
     transform: scale(1.05);
     filter: brightness(0.7);
 }
+#shareButton {
+    display: inline-block; /* Permite que el botón tenga margen y padding */
+    margin-left: 0; /* Alineado a la izquierda */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border-radius: 20px; /* Bordes redondeados de 20px */
+    /* Color de fondo azul */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado en el texto */
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.5), 0 6px 6px rgba(0, 255, 0, 0.3); /* Sombras verdes con efecto 3D */
+    transition: transform 0.3s ease-in-out; /* Transición para el efecto 3D */
+    cursor: pointer; /* Cambia el cursor a mano al pasar sobre el botón */
+    -webkit-tap-highlight-color: transparent;
+}
+#shareButton:hover {
+    transform: perspective(1000px) rotateY(10deg) rotateX(10deg) scale(1.05); /* Efecto 3D al pasar el cursor */
+}
   </style>
 </head>
 <body class="bg-black text-white p-8">
@@ -195,7 +211,8 @@
       Cómo Jugar
       <img src="761453571312189511.png" alt="powerstill" class="h-8 w-8 ml-2">
     </h1>
-    <img src="logo.png" alt="Descripción de la imagen" class="img-3d-effect"><br>
+    <img src="logo.png" alt="sm64coopdx Android tutorial" class="img-3d-effect"><br>
+    <button class="btn-3d-effect" id="shareButton">Compartir</button>
     <h2 class="text-2xl font-bold text-red-500 mb-4">Paso 1: Descargar los archivos</h2>
     <p class="mb-4">
       - Ve a <br><a href="https://www.mediafire.com/file/cub99on08nph8or/sm64coopdx_v1.0_Windows_OpenGL.zip/file" class="btn-3d-effect" download>Descargar <span style="color: yellow;">sm64coopdx OpenGL</span></a><br><br>
@@ -275,5 +292,23 @@
             carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
     </script>
+<script>
+document.getElementById('shareButton').addEventListener('click', async () => {
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: 'SM64COOPDX ANDROID',
+                text: 'Mira aquí las instrucciones y guía de instalación en español.',
+                url: window.location.href
+            });
+            console.log('Contenido compartido exitosamente');
+        } catch (error) {
+            console.error('Error al compartir:', error);
+        }
+    } else {
+        alert('La API de Web Share no es soportada en este navegador.');
+    }
+});
+</script>
 </body>
 </html>
