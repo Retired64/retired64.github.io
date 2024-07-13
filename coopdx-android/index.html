@@ -97,6 +97,7 @@
 
 .img-3d-effect:hover {
     transform: perspective(1000px) rotateY(10deg) rotateX(10deg) scale(1.05); /* Efecto 3D al pasar el cursor */
+    -webkit-tap-highlight-color: transparent;
 }
 .btn-3d-effect {
     display: inline-block; /* Permite que el botón tenga margen y padding */
@@ -109,6 +110,7 @@
     box-shadow: 0 10px 20px rgba(0, 255, 0, 0.5), 0 6px 6px rgba(0, 255, 0, 0.3); /* Sombras verdes con efecto 3D */
     transition: transform 0.3s ease-in-out; /* Transición para el efecto 3D */
     cursor: pointer; /* Cambia el cursor a mano al pasar sobre el botón */
+    overflow: hidden;
     -webkit-tap-highlight-color: transparent;
 }
 
