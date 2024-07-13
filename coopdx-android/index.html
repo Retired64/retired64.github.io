@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- w3c -->
+    <title>Retired64 - SM64COOPDX ANDROID</title>
+    
+    <!-- Keywords -->
+    <meta name="keywords" content="retired64, emuladores, sm64coopdx, sm64coopdx Android, sm64 android, sm64coopdx apk, sm64coopdx Retired64">
+
+    <!-- opengraph -->
+    <meta property="og:image" content="https://retired64.github.io/coopdx-android/logo.png"/>
+    <meta property="og:image:alt" content="Retired64 - SM64COOPDX ANDROID"/>
+    <meta property="og:image:width" content="1280"/>
+    <meta property="og:image:height" content="720"/>
+    <meta property="og:site_name" content="Retired64 - SM64COOPDX ANDROI"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Retired64 - SM64COOPDX ANDROI"/>
+    <meta property="og:url" content="https://retired64.github.io/coopdx-android/"/>
+    <meta property="og:description" content="descubre como jugar SM64COOPDX desde tu celular - tutorial paso a paso"/>
+  
+    <!-- twitter card -->
+    <meta name="twitter:image:src" content="https://retired64.github.io/coopdx-android/logo.png"/>
+    <meta name="twitter:site" content="https://retired64.github.io/coopdx-android/"/>
+    <meta name="twitter:card" content="https://retired64.github.io/coopdx-android/logo.png"/>
+    <meta name="twitter:title" content="Retired64 cemu-droid Español"/>
+    <meta name="twitter:description" content="descubre como jugar SM64COOPDX desde tu celular - tutorial paso a paso"/>
+
+    <!-- links -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .custom-shadow {
+      box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
+    }
+    img.responsive {
+    display: block; /* Asegura que la imagen se comporte como un bloque para centrarla */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    max-width: 100%; /* Asegura que la imagen no sea más grande que su contenedor */
+    width: 50%; /* Ajusta el tamaño de la imagen al 50% de su contenedor */
+    box-shadow: 0 0 10px 5px white; /* Añade sombras blancas */
+    border: 2px solid red; /* Añade un borde rojo */
+}
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-images img {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+            box-shadow: 0 0 10px 5px white;
+            border: 2px solid red;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .carousel-button.prev {
+            left: 10px;
+        }
+
+        .carousel-button.next {
+            right: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .carousel-images img {
+                width: 70%;
+            }
+        }
+.img-3d-effect {
+    display: block; /* Asegura que la imagen se comporte como un bloque para centrarla */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    border-radius: 20px; /* Borde redondeado de 20px */
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.5), 0 6px 6px rgba(0, 255, 0, 0.3); /* Sombras verdes con efecto 3D */
+    transition: transform 0.3s ease-in-out; /* Transición para el efecto 3D */
+}
+
+.img-3d-effect:hover {
+    transform: perspective(1000px) rotateY(10deg) rotateX(10deg) scale(1.05); /* Efecto 3D al pasar el cursor */
+}
+.btn-3d-effect {
+    display: inline-block; /* Permite que el botón tenga margen y padding */
+    margin-left: 0; /* Alineado a la izquierda */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border-radius: 20px; /* Bordes redondeados de 20px */
+    /* Color de fondo azul */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado en el texto */
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.5), 0 6px 6px rgba(0, 255, 0, 0.3); /* Sombras verdes con efecto 3D */
+    transition: transform 0.3s ease-in-out; /* Transición para el efecto 3D */
+    cursor: pointer; /* Cambia el cursor a mano al pasar sobre el botón */
+}
+
+.btn-3d-effect:hover {
+    transform: perspective(1000px) rotateY(10deg) rotateX(10deg) scale(1.05); /* Efecto 3D al pasar el cursor */
+}
+
+.btn-3d-effect:active {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1); /* Quita el efecto 3D al hacer clic */
+}
+.credits {
+    font-size: 14px; /* Tamaño de fuente */
+    color: #666; /* Color de texto gris oscuro */
+    text-align: center; /* Alineación centrada */
+    margin-top: 20px; /* Margen superior */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+.credits a {
+    color: #007bff; /* Color de los enlaces azul */
+    text-decoration: none; /* Sin subrayado en los enlaces */
+    transition: color 0.3s ease; /* Transición suave del color */
+}
+
+.credits a:hover {
+    color: #0056b3; /* Cambio de color al pasar el cursor */
+}
+.app-list {
+    list-style-type: none; /* Quita los puntos de lista */
+    padding: 0; /* Elimina el relleno predeterminado de la lista */
+    font-size: 16px; /* Tamaño de fuente */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+.app-list li {
+    margin-bottom: 10px; /* Margen inferior entre cada elemento de la lista */
+}
+
+.app-list li a {
+    color: #007bff; /* Color de los enlaces azul */
+    text-decoration: none; /* Sin subrayado en los enlaces */
+    transition: color 0.3s ease; /* Transición suave del color */
+}
+
+.app-list li a:hover {
+    color: #0056b3; /* Cambio de color al pasar el cursor */
+}
+  </style>
+</head>
+<body class="bg-black text-white p-8">
+  
+    <h1 class="text-3xl font-bold text-yellow-400 mb-4 flex items-center">
+      <img src="761453571312189511.png" alt="powerstill" class="h-8 w-8 mr-2">
+      Cómo Jugar
+      <img src="761453571312189511.png" alt="powerstill" class="h-8 w-8 ml-2">
+    </h1>
+    <img src="logo.png" alt="Descripción de la imagen" class="img-3d-effect"><br>
+    <h2 class="text-2xl font-bold text-red-500 mb-4">Paso 1: Descargar los archivos</h2>
+    <p class="mb-4">
+      - Ve a <br><a href="https://www.mediafire.com/file/cub99on08nph8or/sm64coopdx_v1.0_Windows_OpenGL.zip/file" class="btn-3d-effect" download>Descargar <span style="color: yellow;">sm64coopdx OpenGL</span></a><br><br>
+      - Descomprime el archivo en cualquier lugar de tu Almacenamiento interno y adentro añade tu <code class="bg-gray-700 p-1 rounded">baserom.us.z64</code> dentro del archivo descomprimido.
+    </p>
+
+    <h2 class="text-2xl font-bold text-red-500 mb-4">Paso 2: Iniciar el juego</h2>
+    <p class="mb-4">
+      - Ejecuta <code class="bg-gray-700 p-1 rounded">sm64coopdx.exe</code> Dentro del emulador en Español <span style="color: cyan;">WINLATOR</span><br>
+      	version 7.1<br>
+      - Coloca una ROM US de Super Mario 64 al juego (esto es necesario para que el juego obtenga todos los assets).<br>
+      - ¡Disfruta jugando sm64coopdx!
+    </p>
+    <p class="italic text-yellow-300">
+      <strong>Nota:</strong> coloca la ROM en la carpeta del juego  .exe solo es necesario la primera vez que abres el juego (no tienes que hacerlo después de una nueva actualización).
+    </p>
+    <img src="rom.png" alt="Descripción de la imagen" class="responsive">
+    <p class="mt-4">
+      Si tienes alguna pregunta (cómo instalar mods, host, unirse...) por favor consulta:
+    </p>
+    <h2 class="text-2xl font-bold text-red-500 mb-4">Configurar<span style="color: yellow;">WINLATOR</span></h2>
+  </div>
+  <a href="https://www.mediafire.com/file/gickqu6pm5mw1yc/win-es_src.apk/file" class="btn-3d-effect" download>Descargar <span style="color: yellow;">winlator</span></a><br><br>
+    <div class="carousel">
+    	<p style="color: red;">PASOS: pulsa la flecha de la imagen para ver cada paso</p><br>
+        <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="carousel-images">
+            <img src="im/1.png" alt="Descripción de la imagen 1" class="responsive">
+            <img src="im/2.png" alt="Descripción de la imagen 2" class="responsive">
+            <img src="im/3.png" alt="Descripción de la imagen 3" class="responsive">
+            <img src="im/4.png" alt="Descripción de la imagen 3" class="responsive">
+            <img src="im/5.png" alt="Descripción de la imagen 1" class="responsive">
+            <img src="im/6.png" alt="Descripción de la imagen 2" class="responsive">
+            <img src="im/7.png" alt="Descripción de la imagen 3" class="responsive">
+            <img src="im/8.png" alt="Descripción de la imagen 3" class="responsive">
+            <img src="im/9.png" alt="Descripción de la imagen 3" class="responsive">
+            <img src="im/10.png" alt="Descripción de la imagen 3" class="responsive">
+            <img src="im/11.png" alt="Descripción de la imagen 3" class="responsive">
+            <img src="im/12.png" alt="Descripción de la imagen 3" class="responsive">
+            <img src="im/13.png" alt="Descripción de la imagen 3" class="responsive">
+
+        </div>
+        <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    <p class="italic text-yellow-300">
+      <strong>Nota:</strong> este winlator ya viene con los controles y ajustes configurados para sm64coopdx 
+    </p>
+            <img src="im/11.png" alt="Descripción de la imagen 3" class="img-3d-effect">
+            <img src="im/12.png" alt="Descripción de la imagen 3" class="img-3d-effect">
+            <img src="im/13.png" alt="Descripción de la imagen 3" class="img-3d-effect">
+     <br><br>
+    <h2 class="text-2xl font-bold text-red-500 mb-4">CREDITOS DE <span style="color: yellow;">TERCEROS</span></h2>
+    <ul class="app-list">
+    <li><a href="https://winlator.org" target="_blank">BrunoSX Dev85</a></li>
+    <li><a href="https://sm64coopdx.com" target="_blank">Agent X</a></li>
+    <li><a href="https://youtube.com/@retired64" target="_blank">Retired64</a></li>
+    </ul>
+   <footer class="credits">
+        Créditos de uso y creador de la guía: © 2024 Retired64. Todos los derechos reservados. Desarrollado por <a href="https://www.ejemplo.com" target="_blank">Retired64</a>.
+    </footer>
+  <script>
+        let currentIndex = 0;
+
+        function moveSlide(direction) {
+            const slides = document.querySelectorAll('.carousel img');
+            const totalSlides = slides.length;
+            currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+            const carouselImages = document.querySelector('.carousel-images');
+            carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    </script>
+</body>
+</html>
