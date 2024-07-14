@@ -229,6 +229,38 @@
 .super-mario-enlace:hover {
     text-shadow: 2px 2px 4px #00ff00; /* Sombra verde al pasar el cursor */
 }
+    .discord-button {
+      background-color: #7289da;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+
+      border-radius: 10px;
+      box-shadow: 0 8px 15px rgba(0, 0, 255, 0.6);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .discord-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 255, 0.8);
+    }
+
+    .discord-button:active {
+      transform: translateY(2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 255, 0.4);
+    }
+
+    .discord-button img {
+      margin-right: 10px;
+      width: 24px;
+      height: 24px;
+    }
   </style>
 </head>
 <body class="bg-black text-white p-8">
@@ -251,8 +283,14 @@
     <h2 class="text-2xl font-bold text-red-500 mb-4">Paso 1: Descargar los archivos</h2>
     <p class="mb-4">
       - Ve a <br><a href="https://www.mediafire.com/file/cub99on08nph8or/sm64coopdx_v1.0_Windows_OpenGL.zip/file" class="btn-3d-effect" download>Descargar <span style="color: yellow;">sm64coopdx OpenGL</span></a><br><br>
-      - Descomprime el archivo en cualquier lugar de tu Almacenamiento interno y adentro añade tu <code class="bg-gray-700 p-1 rounded">baserom.us.z64</code> dentro del archivo descomprimido.
+      - Descomprime el archivo en cualquier lugar de tu Almacenamiento interno y adentro añade tu <code class="bg-gray-700 p-1 rounded">baserom.us.z64</code> dentro del archivo descomprimido.</p>
+      <br>
+      <p> Asegúrate de que la <span style="color: yellow;">ROM</span> tenga una extensión <span style="color: yellow;">.z64</span>: Asegúrate de que el nombre del archivo termine con .z64 por defecto.<span style="color: yellow;">Región: Estados Unidos</span></p>
+      <br>
+      <p>
+       Verifica el tamaño del archivo: La ROM debe tener un tamaño de 8MB.
     </p>
+    <br>
 
     <h2 class="text-2xl font-bold text-red-500 mb-4">Paso 2: Iniciar el juego</h2>
     <p class="mb-4">
@@ -320,7 +358,11 @@
     <a href="https://youtube.com/@retired64" class="image-link">
             <img src="retired64.png" alt="Retired64 on Youtube sm64coopdx">
     </a>
-    
+    <br>
+  <a href="https://discord.com/invite/yr9gPuhgwz" class="discord-button">
+    <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord Logo">
+    chat Discord
+  </a>
     <!--
     <img src="retired64.png" alt="Retired64 on Youtube sm64coopdx" class="img-3d-effect"><br>
     -->
