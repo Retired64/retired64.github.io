@@ -1,10 +1,10 @@
-# web
+# web de sm64coopdx android 
 [https://retired64.github.io/coopdx-android/](https://retired64.github.io/coopdx-android/)
 # SM64COOPDX Android Port
 
 ¡Bienvenido al port de SM64COOPDX para Android! Este proyecto permite disfrutar de Super Mario 64 en modo multijugador de hasta 16 jugadores en dispositivos Android. Creado por Agent.X, SM64COOPDX es una emocionante adaptación que te permite revivir este clásico con tus amigos.
 
-## Requisitos Mínimos Indispensables para Jugar
+## Requisitos Mínimos Indispensables para Jugar sm64coopdx android 
 
 - **Memoria RAM:** 4 GB mínimo (6 GB recomendado)
 - **Procesador:** Snapdragon 600 o equivalente
@@ -16,7 +16,7 @@
 - Ve a [Descargar sm64coopdx OpenGL](https://www.mediafire.com/file/cub99on08nph8or/sm64coopdx_v1.0_Windows_OpenGL.zip/file)
 - Descomprime el archivo en tu almacenamiento interno y añade tu `baserom.us.z64` dentro del archivo descomprimido
 
-## Paso 2: Iniciar el juego
+## Paso 2: Iniciar el juego SM64COOPDX 
 
 - Ejecuta `sm64coopdx.exe` dentro del emulador en español **WINLATOR** (versión 7.1)
 - Coloca una ROM US de Super Mario 64 para obtener todos los assets
@@ -31,7 +31,7 @@ Coloca la ROM en la carpeta del juego `.exe`. Esto solo es necesario la primera 
 
 Si tienes alguna pregunta sobre cómo instalar mods, hostear o unirte, consulta:
 
-## Configurar WINLATOR
+## Configurar WINLATOR para jugar sm64coopdx 
 
 Descarga [winlator](https://www.mediafire.com/file/gickqu6pm5mw1yc/win-es_src.apk/file)
 
