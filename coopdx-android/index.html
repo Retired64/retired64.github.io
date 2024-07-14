@@ -202,6 +202,33 @@
 #shareButton:hover {
     transform: perspective(1000px) rotateY(10deg) rotateX(10deg) scale(1.05); /* Efecto 3D al pasar el cursor */
 }
+.super-mario-requisitos {
+    color: #ff0000; /* Rojo */
+}
+
+.super-mario-lista {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0;
+}
+
+.super-mario-lista li {
+    
+    color: #982; /* Negro */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #00ff00; /* Sombra verde */
+}
+
+.super-mario-enlace {
+    color: #ff0000; /* Rojo */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.super-mario-enlace:hover {
+    text-shadow: 2px 2px 4px #00ff00; /* Sombra verde al pasar el cursor */
+}
   </style>
 </head>
 <body class="bg-black text-white p-8">
@@ -213,6 +240,14 @@
     </h1>
     <img src="logo.png" alt="sm64coopdx Android tutorial" class="img-3d-effect"><br>
     <button class="btn-3d-effect" id="shareButton">Compartir</button><br><br>
+    <h3 class="super-mario-requisitos">Requisitos Mínimos Indispensables para Jugar</h3>
+    <ul class="super-mario-lista">
+        <li>4 GB de RAM minimo o<br> <span style="color: yellow;">6 GB de RAM recomendado</span></li>
+        <li>Procesador recomendado: Snapdragon 600 en adelante<br>O su igualado en otros <span style="color: yellow;">procesadores</span></li>
+        <li>Espacio disponible: 2 GB</li>
+        <li>Seguir la guía del video de YouTube para más información</li>
+    </ul>
+    <a class="btn-3d-effect" href="https://youtu.be/BNsbLSQZ6Ik" target="_blank">Ver Video de YouTube</a><br><br>
     <h2 class="text-2xl font-bold text-red-500 mb-4">Paso 1: Descargar los archivos</h2>
     <p class="mb-4">
       - Ve a <br><a href="https://www.mediafire.com/file/cub99on08nph8or/sm64coopdx_v1.0_Windows_OpenGL.zip/file" class="btn-3d-effect" download>Descargar <span style="color: yellow;">sm64coopdx OpenGL</span></a><br><br>
