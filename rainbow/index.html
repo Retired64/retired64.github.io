@@ -157,6 +157,55 @@
     color: #ffb700; /* Texto amarillo */
     font-family: 'Courier New', Courier, monospace; /* Estilo de terminal */
   }
+  /* Estilos personalizados para el carrusel */
+.custom-carousel {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(255, 0, 0, 0.5);
+}
+
+.custom-carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.custom-carousel-image {
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.custom-carousel-prev,
+.custom-carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.custom-carousel-prev {
+  left: 10px;
+}
+
+.custom-carousel-next {
+  right: 10px;
+}
+
+.custom-carousel-prev:hover,
+.custom-carousel-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
  
   </style>
 </head>
@@ -182,10 +231,21 @@
           <li>Citadel</li>
           <li>Spire</li>
       </ul>
+       <!-- Carrusel de imágenes personalizado -->
+<div class="custom-carousel">
+  <div class="custom-carousel-inner">
+    <img src="images/map1.png" alt="Map 1" class="custom-carousel-image">
+    <img src="images/map2.png" alt="Map 2" class="custom-carousel-image">
+    <img src="images/map3.png" alt="Map 3" class="custom-carousel-image">
+    <img src="images/map4.png" alt="Map 4" class="custom-carousel-image">
+    <img src="images/map5.png" alt="Map 5" class="custom-carousel-image">
+    <img src="images/map6.png" alt="Map 6" class="custom-carousel-image">
+  </div>
+  <button class="custom-carousel-prev" onclick="prevImage()">&#10094;</button>
+  <button class="custom-carousel-next" onclick="nextImage()">&#10095;</button>
+</div>   
 
  <hr>
-
-
 
     <h2>2. <code>/arena-mode &lt;modo&gt;</code></h2>
     <p>Cambia el modo de juego. Los modos disponibles son:</p>
@@ -250,7 +310,7 @@
   <ul>
     <li><code>/arena-enable</code>: Activa el mod de Arena, permitiendo el uso de niveles personalizados como "Rainbow Road".</li>
   </ul>
-    
+
       <hr>
     <h2>Agradecería que:</h2>
     <p>Si te a servido regálame tu suscripción en YouTube para traer más guías y contenido en español y funcional, aquí te dejo mis redes sociales</p>
@@ -268,5 +328,6 @@
       <img src="twitter.png" alt="Twitter Retired64">
     </a>
   </footer>
+  <script src="foto.js"></script>
 </body>
 </html>
