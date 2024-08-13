@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="index, follow">
+    <!-- w3c -->
+     <title>DISCORD BOT EN TERMUX ANDROID</title>
+    
+    <!-- Keywords -->
+    <meta name="keywords" content="Discord bot, Termux, Android, instalación bot Discord, ejecutar bot, pm2 Termux, Discord.js, comandos Termux, automatización Discord, script bot Termux, Retired64, Termux wake lock, configurar bot Discord, servidor Discord, Googleapis, nodejs Termux, ejecutar comandos Discord"/>
+
+    <meta name="description" content="Retired64 Discord Bot en Termux, diseñado para ofrecer una experiencia completa en servidores. Administra canales, modera contenido y ejecuta comandos." />
+    <meta name="author" content="Retired64" />
+    
+    <!-- Color Pestaña-->
+    <meta name="theme-color" content="#800000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="canonical" href="https://retired64.github.io/discord-bot/">
+    
+
+    <!-- opengraph -->
+    <meta property="og:image" content="https://retired64.github.io/discord-bot/logo.png"/>
+    <meta property="og:image:alt" content="Bot de discord desde Termux Android"/>
+    <meta property="og:image:width" content="950"/>
+    <meta property="og:image:height" content="350"/>
+    <meta property="og:site_name" content="DISCORD JS node Desde Termux Android"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Discord bot desde Termux Android"/>
+    <meta property="og:url" content="https://retired64.github.io"/>
+    <meta property="og:description" content="Retired64 Discord Bot en Termux, diseñado para ofrecer una experiencia completa en servidores. Administra canales, modera contenido y ejecuta comandos."/>
+    <!-- twitter card -->
+    <meta name="twitter:image:src" content="https://retired64.github.io/discord-bot/logo.png"/>
+    <meta name="twitter:site" content="https://retired64.github.io/discord-bot"/>
+    <meta name="twitter:card" content="https://retired64.github.io/discord-bot/logo.png"/>
+    <meta name="twitter:title" content="Discordjs Termux BOT APP "/>
+
+    <meta name="twitter:description" content="Retired64 Discord Bot en Termux, diseñado para ofrecer una experiencia completa en servidores. Administra canales, modera contenido y ejecuta comandos."/>
+    <link rel="shortcut icon" href="https://retired64.github.io/discord-bot/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://retired64.github.io/discord-bot/favicon.ico">
+
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 30px;
+        }
+        p, li {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #b0b0b0;
+        }
+        pre {
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        code {
+            color: #00ff99;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        a.custom-link {
+            text-decoration: none; /* eliminar subrayado */
+            color: rgba(255, 0, 0, 0.8); /* rojo opaco */
+            border-radius: 20px; /* border radius verde */
+            border: 2px solid green; /* borde verde */
+            padding: 10px 20px; /* espaciado interno */
+            transition: color 0.3s ease, border-color 0.3s ease; /* transición suave para el hover */
+        }
+
+        a.custom-link:hover {
+            color: green; /* verde más intenso al hacer hover */
+            border-color: darkgreen; /* cambia el color del borde al hacer hover */
+        } 
+    </style>
+</head>
+<body>
+    <h1>Discord Bot en Termux - Resumen</h1>
+
+    <h2>Descripción</h2>
+    <p>Este repositorio proporciona un script que permite la instalación y ejecución de un bot de Discord directamente en Termux, un emulador de terminal para Android. El script está diseñado para facilitar la configuración y ejecución del bot sin necesidad de conocimientos avanzados de programación.</p>
+
+    <h2>Instalación</h2>
+    <p>Para instalar el bot de Discord en Termux, sigue estos pasos:</p>
+    <ol>
+        <li>actualiza termux:</li>
+        <pre><code>yes|pkg update && yes|pkg upgrade</code></pre>
+        <li>instala los requisitos:</li>
+        <pre><code>pkg install nodejs</code></pre>
+        <li>Módulos Necesarios</li>
+        <pre><code>npm install discord.js</code></pre>
+        <pre><code>npm install googleapis</code></pre>
+        <li>Instalar el servidor:</li>
+        <pre><code>npm install -g pm2</code></pre>
+    </ol>
+
+    <h2>Ejecución</h2>
+    <p>Una vez instalado, puedes iniciar el bot con el siguiente comando Suponiendo que ti archivo del bot está en el directorio actual:</p>
+    <pre><code>pm2 start tu-bot.js --name "tu_bot"</code></pre>
+    <p>Donde tu-bot.js es el archivo de tus comandos de bot y el que está entre comillas es un nombre para identificar el proceso del bot pueda ser el que sea. El bot se conectará a tu servidor de Discord automáticamente y estará listo para recibir comandos.</p>
+
+    <h2>Detener el bot</h2>
+    <p>Comandos después de iniciar tu bot:</p>
+    <p>Lista de tu proceso de bot</p>
+    <pre><code>pm2 list</code></pre>
+    <p>Detener el proceso de tu bot discord que guardaste en el comando --name "tu_bot"</p>
+    <pre><code>pm2 stop tu_bot</code></pre>
+    <p>Donde tu_bot es el nombre del servidor que creaste</p>
+
+    <h2>Datos Importantes</h2>
+    <p>El bot Podría detenerse y dejar de funcionar en discord para ello requiere que no desconectes tu wifi actual ya que si es cambiado el bot tendrá que ser detenido e iniciado de vuelta, también podría detenerse si el proceso de termux es interrumpido por ejemplo la optimización de batería deberías hacer que no se optimice para ello pon la aplicación sin restricciones de uso de batería por ejemplo y activar el comando:</p>
+    <ul>
+        <li><code>termux-wake-lock</code> - para mantener a termux activo deanera forzada</li>
+        <li><code>termux-wake-unlock</code> - para poder quitar termux y cerrarlo después que quieras apagar tu bot... ojo que esto es una ayuda extra más lo importante es lo de arriba de esto del wifi</li>
+    </ul>
+
+    <h2>Conclusión</h2>
+    <p>Este bot de Discord es una excelente forma de automatizar tareas y añadir funcionalidades a tu servidor de Discord desde un dispositivo Android utilizando Termux. La instalación y configuración son sencillas, y el código es fácilmente personalizable para adaptarse a tus necesidades específicas.<br><br><a href="comandos.js" class="custom-link">bot-ejemplo.js</a></p>
+
+</body>
+</html>
